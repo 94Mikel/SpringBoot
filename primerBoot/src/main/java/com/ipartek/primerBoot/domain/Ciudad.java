@@ -3,6 +3,8 @@ package com.ipartek.primerBoot.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +18,8 @@ public class Ciudad {
 		@Column(name="Name")
 		private String nombre;
 		
-		@Column(name="Countrycode")
+		@ManyToOne
+	    @JoinColumn(name ="Countrycode")
 		private String codigoPais;
 		
 		@Column(name="District")
@@ -24,6 +27,7 @@ public class Ciudad {
 		
 		@Column(name="Population")
 		private int populacion;
+		
 		
 		public int getId() {
 			return id;

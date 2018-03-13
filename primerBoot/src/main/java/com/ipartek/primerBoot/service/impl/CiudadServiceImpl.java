@@ -26,6 +26,11 @@ public class CiudadServiceImpl implements CiudadService{
 		return ciudadRepository.findByNombre(nombre);
 	}
 	
+	@Override
+	public void inseratCiudad(Ciudad ciudad) {
+		ciudadRepository.save(ciudad);
+	}
+	
 
 	
 }

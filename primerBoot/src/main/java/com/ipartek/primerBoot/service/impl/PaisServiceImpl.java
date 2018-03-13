@@ -25,5 +25,6 @@ public class PaisServiceImpl implements PaisService{
 	public Pais getPaisByNombre(String nombre) {
 		return paisRepository.findByNombre(nombre);
 	}
+	
 
 }

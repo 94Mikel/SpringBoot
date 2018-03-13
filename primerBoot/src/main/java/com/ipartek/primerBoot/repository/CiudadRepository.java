@@ -6,4 +6,5 @@ import com.ipartek.primerBoot.domain.Ciudad;
 
 public interface CiudadRepository extends JpaRepository<Ciudad, Integer>{
 	Ciudad findByNombre(String nombre);
+	Ciudad insertCiudad();
 }

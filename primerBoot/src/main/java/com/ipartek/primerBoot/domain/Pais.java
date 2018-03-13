@@ -1,8 +1,11 @@
 package com.ipartek.primerBoot.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +27,19 @@ import org.springframework.web.bind.annotation.RestController;
 		
 		@Column(name="Region")
 		private String region;
+		
+		@OneToMany(mappedBy = "codigoPais")
+		List<Ciudad> ciudades;
+		
+		
+		
+		public List<Ciudad> getCiudades() {
+			return ciudades;
+		}
+
+		public void setCiudades(List<Ciudad> ciudades) {
+			this.ciudades = ciudades;
+		}
 
 		public String getIdPais() {
 			return idPais;
