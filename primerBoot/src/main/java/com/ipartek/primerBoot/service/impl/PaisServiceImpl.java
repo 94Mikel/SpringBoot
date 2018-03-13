@@ -23,7 +23,6 @@ public class PaisServiceImpl implements PaisService{
 
 	@Override
 	public Pais getPaisByNombre(String nombre) {
-		System.out.println(paisRepository.findByNombre(nombre));
 		return paisRepository.findByNombre(nombre);
 	}
 
