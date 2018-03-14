@@ -32,7 +32,6 @@ import org.springframework.web.bind.annotation.RestController;
 		List<Ciudad> ciudades;
 		
 		
-		
 		public List<Ciudad> getCiudades() {
 			return ciudades;
 		}

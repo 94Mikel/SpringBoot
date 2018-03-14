@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ipartek.primerBoot.domain.Ciudad;
 import com.ipartek.primerBoot.service.CiudadService;
-import com.ipartek.primerBoot.service.PaisService;
 
 @CrossOrigin(origins = {"http://localhost"})
 @RestController
