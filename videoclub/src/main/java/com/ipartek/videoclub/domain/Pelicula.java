@@ -39,8 +39,21 @@ public class Pelicula {
 	@Column
 	private int proveedor_idproveedor;
 
+	public Pelicula(){}
 	
-	
+	public Pelicula(int idpelicula, String titulo, String director, Date fecha_estreno, String descripcion,
+			boolean disponibilidad, double precio_alquiler, int proveedor_idproveedor) {
+		super();
+		setIdpelicula(idpelicula);
+		setTitulo(titulo);
+		setDirector(director);
+		setFecha_estreno(fecha_estreno);
+		setDescripcion(descripcion);
+		setDisponibilidad(disponibilidad);
+		setPrecio_alquiler(precio_alquiler);
+		setProveedor_idproveedor(proveedor_idproveedor);
+	}
+
 	public int getIdpelicula() {
 		return idpelicula;
 	}

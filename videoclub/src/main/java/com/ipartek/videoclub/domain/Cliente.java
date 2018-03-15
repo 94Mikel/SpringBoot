@@ -34,7 +34,20 @@ public class Cliente {
 	@Column
 	private String numseguridadsocial;
 	
+	public Cliente(){}
 	
+	public Cliente(int idcliente, String nombre, String apellidos, String direccion, String email, String telefono,
+			String numseguridadsocial) {
+		super();
+		setIdcliente(idcliente);
+		setNombre(nombre);
+		setApellidos(apellidos);
+		setDirecion(direccion);
+		setEmail(email);
+		setTelefono(telefono);
+		setnumseguridadsocial(numseguridadsocial);
+	}
+
 	public int getIdcliente() {
 		return idcliente;
 	}
