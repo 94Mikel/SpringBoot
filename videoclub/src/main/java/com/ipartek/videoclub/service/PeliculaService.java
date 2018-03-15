@@ -6,5 +6,5 @@ import com.ipartek.videoclub.domain.Pelicula;
 
 public interface PeliculaService {
 	public List<Pelicula> getPeliculas();
-	public Pelicula getPelicualByNombre(String nombre);
+	public Pelicula getPelicualByTitulo(String titulo);
 }

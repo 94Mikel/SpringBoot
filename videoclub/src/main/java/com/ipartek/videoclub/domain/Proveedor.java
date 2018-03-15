@@ -13,7 +13,7 @@ public class Proveedor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="idporveedor")
+	@Column
 	private int idproveedor;
 	
 	@Column
@@ -23,7 +23,7 @@ public class Proveedor {
 	private String direccion;
 	
 	@Column
-	private String webProveedor;
+	private String webproveedor;
 	
 	@Column
 	private String cuenta_bancaria;
@@ -52,12 +52,12 @@ public class Proveedor {
 		this.direccion = direccion;
 	}
 
-	public String getWebProveedor() {
-		return webProveedor;
+	public String getWebproveedor() {
+		return webproveedor;
 	}
 
-	public void setWebProveedor(String webProveedor) {
-		this.webProveedor = webProveedor;
+	public void setWebproveedor(String webproveedor) {
+		this.webproveedor = webproveedor;
 	}
 
 	public String getCuenta_bancaria() {

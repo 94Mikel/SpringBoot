@@ -6,5 +6,5 @@ import com.ipartek.videoclub.domain.Pelicula;
 
 public interface PeliculaRepository extends JpaRepository<Pelicula, Integer>{
 
-	Pelicula findByNombre(String nombre);
+	Pelicula findByTitulo(String titulo);
 }

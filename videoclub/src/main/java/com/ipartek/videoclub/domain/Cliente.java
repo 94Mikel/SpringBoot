@@ -23,7 +23,7 @@ public class Cliente {
 	private String apellidos;
 	
 	@Column
-	private String direcion;
+	private String direccion;
 	
 	@Column
 	private String email;
@@ -32,7 +32,7 @@ public class Cliente {
 	private String telefono;
 	
 	@Column
-	private String numSeguridadSocial;
+	private String numseguridadsocial;
 	
 	
 	public int getIdcliente() {
@@ -60,11 +60,11 @@ public class Cliente {
 	}
 
 	public String getDirecion() {
-		return direcion;
+		return direccion;
 	}
 
-	public void setDirecion(String direcion) {
-		this.direcion = direcion;
+	public void setDirecion(String direccion) {
+		this.direccion = direccion;
 	}
 
 	public String getEmail() {
@@ -83,11 +83,11 @@ public class Cliente {
 		this.telefono = telefono;
 	}
 
-	public String getNumSeguridadSocial() {
-		return numSeguridadSocial;
+	public String getnumseguridadsocial() {
+		return numseguridadsocial;
 	}
 
-	public void setNumSeguridadSocial(String numSeguridadSocial) {
-		this.numSeguridadSocial = numSeguridadSocial;
+	public void setnumseguridadsocial(String numseguridadsocial) {
+		this.numseguridadsocial = numseguridadsocial;
 	}
 }

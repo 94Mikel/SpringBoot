@@ -11,26 +11,18 @@ import com.ipartek.primerBoot.service.CiudadService;
 
 @Service
 public class CiudadServiceImpl implements CiudadService{
-
 	@Autowired
 	CiudadRepository ciudadRepository;
-	
-	
 	@Override
 	public List<Ciudad> getCiudades() {
 		return ciudadRepository.findAll();
 	}
-
 	@Override
 	public Ciudad getCiudadByNombre(String nombre) {
 		return ciudadRepository.findByNombre(nombre);
 	}
-	
 	@Override
 	public void inseratCiudad(Ciudad ciudad) {
 		ciudadRepository.save(ciudad);
 	}
-	
-
-	
 }

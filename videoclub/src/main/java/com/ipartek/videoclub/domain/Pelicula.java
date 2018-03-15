@@ -22,7 +22,7 @@ public class Pelicula {
 	private String titulo;
 	
 	@Column
-	private String direccion;
+	private String director;
 	
 	@Column
 	private Date fecha_estreno;
@@ -39,6 +39,8 @@ public class Pelicula {
 	@Column
 	private int proveedor_idproveedor;
 
+	
+	
 	public int getIdpelicula() {
 		return idpelicula;
 	}
@@ -55,12 +57,12 @@ public class Pelicula {
 		this.titulo = titulo;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public String getDirector() {
+		return director;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDirector(String director) {
+		this.director = director;
 	}
 
 	public Date getFecha_estreno() {
