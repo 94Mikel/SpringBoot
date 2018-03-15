@@ -1,11 +1,10 @@
 package com.ipartek.videoclub.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+
+import java.util.Set;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="cliente")
@@ -34,10 +33,20 @@ public class Cliente {
 	@Column
 	private String numseguridadsocial;
 	
+	@Column
+	private String contrasena;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable
+    private Set<Pelicula> Peliculas;
+	
 	public Cliente(){}
 	
+	
+
+	
 	public Cliente(int idcliente, String nombre, String apellidos, String direccion, String email, String telefono,
-			String numseguridadsocial) {
+			String numseguridadsocial, String contrasena) {
 		super();
 		setIdcliente(idcliente);
 		setNombre(nombre);
@@ -46,7 +55,10 @@ public class Cliente {
 		setEmail(email);
 		setTelefono(telefono);
 		setnumseguridadsocial(numseguridadsocial);
+		setContrasena(contrasena);
 	}
+
+
 
 	public int getIdcliente() {
 		return idcliente;
@@ -103,4 +115,14 @@ public class Cliente {
 	public void setnumseguridadsocial(String numseguridadsocial) {
 		this.numseguridadsocial = numseguridadsocial;
 	}
+
+	public String getContrasena() {
+		return contrasena;
+	}
+
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}
+	
+	
 }

@@ -1,13 +1,9 @@
 package com.ipartek.videoclub.domain;
 
 import java.util.Date;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="pelicula")
@@ -36,13 +32,16 @@ public class Pelicula {
 	@Column
 	private double precio_alquiler;
 	
-	@Column
-	private int proveedor_idproveedor;
-
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="proveedor_idproveedor")
+	private Proveedor proveedor;
+	
 	public Pelicula(){}
 	
+	
+
 	public Pelicula(int idpelicula, String titulo, String director, Date fecha_estreno, String descripcion,
-			boolean disponibilidad, double precio_alquiler, int proveedor_idproveedor) {
+			boolean disponibilidad, double precio_alquiler, Proveedor proveedor) {
 		super();
 		setIdpelicula(idpelicula);
 		setTitulo(titulo);
@@ -51,8 +50,14 @@ public class Pelicula {
 		setDescripcion(descripcion);
 		setDisponibilidad(disponibilidad);
 		setPrecio_alquiler(precio_alquiler);
-		setProveedor_idproveedor(proveedor_idproveedor);
+		setProveedor(proveedor);
 	}
+
+
+
+	
+
+
 
 	public int getIdpelicula() {
 		return idpelicula;
@@ -110,13 +115,11 @@ public class Pelicula {
 		this.precio_alquiler = precio_alquiler;
 	}
 
-	public int getProveedor_idproveedor() {
-		return proveedor_idproveedor;
+	public Proveedor getProveedor() {
+		return proveedor;
 	}
 
-	public void setProveedor_idproveedor(int proveedor_idproveedor) {
-		this.proveedor_idproveedor = proveedor_idproveedor;
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
 	}
-	
-	
 }
