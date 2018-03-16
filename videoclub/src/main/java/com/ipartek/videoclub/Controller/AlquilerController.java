@@ -29,5 +29,5 @@ public class AlquilerController {
 	public Alquiler getAlquilerByidCliente(@PathVariable int idcliente) {
 		return alquilerService.getAlquilerByidCliente(idcliente);
 	}
-	
+
 }

@@ -20,9 +20,7 @@ public class AlquilerServiceImpl implements AlquilerService{
 		return (List<Alquiler>) alquilerRepository.findAll();
 	}
 	
-	//@queri para obtener alquiler por idCliente
 	public Alquiler getAlquilerByidCliente(@PathVariable int idcliente) {
-		//return alquilerRepository.findByIdCliente(idcliente);
-		return null;
+		return alquilerRepository.findByIdCliente(idcliente);
 	}
 }

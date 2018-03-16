@@ -32,14 +32,12 @@ public class Pelicula {
 	@Column
 	private double precio_alquiler;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="proveedor_idproveedor")
 	private Proveedor proveedor;
 	
 	public Pelicula(){}
 	
-	
-
 	public Pelicula(int idpelicula, String titulo, String director, Date fecha_estreno, String descripcion,
 			boolean disponibilidad, double precio_alquiler, Proveedor proveedor) {
 		super();
@@ -52,12 +50,6 @@ public class Pelicula {
 		setPrecio_alquiler(precio_alquiler);
 		setProveedor(proveedor);
 	}
-
-
-
-	
-
-
 
 	public int getIdpelicula() {
 		return idpelicula;

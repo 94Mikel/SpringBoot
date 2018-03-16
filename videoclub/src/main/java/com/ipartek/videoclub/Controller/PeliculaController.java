@@ -26,7 +26,7 @@ public class PeliculaController{
 	}
 	
 	@GetMapping(path="/{titulo}",produces="application/json")
-	public Pelicula getPeliculaByNombre(@PathVariable String titulo) {
+	public Pelicula getPeliculaByTitulo(@PathVariable String titulo) {
 		return peliculaService.getPelicualByTitulo(titulo);
 	}
 }
