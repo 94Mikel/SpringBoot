@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ipartek.videoclub.domain.Pelicula;
 import com.ipartek.videoclub.service.PeliculaService;
 
-@CrossOrigin(origins = {"http://localhost"})
+//@CrossOrigin(origins = {"http://localhost"})
 @RestController
-@RequestMapping("/peliculas")
+@RequestMapping(value="/peliculas")
 public class PeliculaController{
 	
 	@Autowired

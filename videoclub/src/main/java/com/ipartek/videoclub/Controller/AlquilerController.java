@@ -14,7 +14,7 @@ import com.ipartek.videoclub.service.AlquilerService;
 
 @CrossOrigin(origins = {"http://localhost"})
 @RestController
-@RequestMapping("/Alquileres")
+@RequestMapping("/alquileres")
 public class AlquilerController {
 
 	@Autowired
